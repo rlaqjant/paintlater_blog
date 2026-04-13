@@ -167,7 +167,7 @@ draft: false
 - [ ] 다크 모드 (next-themes + shadcn)
 - [ ] RSS 피드 (Route Handler)
 - [ ] SEO (generateMetadata, sitemap.xml, robots.txt)
-- [ ] Vercel 배포
+- [x] Vercel 배포 (https://paintlater-blog.vercel.app)
 
 ### 2차
 
