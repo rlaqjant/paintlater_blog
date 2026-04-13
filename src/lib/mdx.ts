@@ -1,6 +1,7 @@
 import rehypePrettyCode, { type Options as PrettyCodeOptions } from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeMermaid from "rehype-mermaid";
 import remarkGfm from "remark-gfm";
 import type { Pluggable } from "unified";
 
@@ -10,11 +11,16 @@ const prettyCodeOptions: PrettyCodeOptions = {
   defaultLang: "plaintext",
 };
 
+const mermaidOptions = {
+  strategy: "pre-mermaid" as const,
+};
+
 export const mdxCompileOptions = {
   mdxOptions: {
     remarkPlugins: [remarkGfm] as Pluggable[],
     rehypePlugins: [
       rehypeSlug,
+      [rehypeMermaid, mermaidOptions],
       [rehypePrettyCode, prettyCodeOptions],
       [
         rehypeAutolinkHeadings,

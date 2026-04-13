@@ -15,6 +15,7 @@ import { SeriesNav } from "@/components/series-nav";
 import { TableOfContents } from "@/components/table-of-contents";
 import { ViewCounter } from "@/components/view-counter";
 import { GiscusComments } from "@/components/giscus-comments";
+import { MermaidRunner } from "@/components/mermaid-runner";
 
 export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -108,6 +109,7 @@ export default async function PostPage({
         <div className="prose prose-zinc dark:prose-invert max-w-none">
           {content}
         </div>
+        <MermaidRunner />
         {post.meta.series && seriesPosts.length > 1 ? (
           <SeriesNav
             series={post.meta.series}

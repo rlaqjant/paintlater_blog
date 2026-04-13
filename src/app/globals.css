@@ -130,3 +130,20 @@
     @apply font-sans;
   }
 }
+
+/* Mermaid 다이어그램 컨테이너 */
+.prose pre.mermaid {
+  background: transparent;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  color: inherit;
+  font-family: inherit;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+.prose pre.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
