@@ -171,11 +171,11 @@ draft: false
 
 ### 2차
 
-- [ ] 포스트 검색 (Fuse.js 클라이언트 검색)
-- [ ] 포스트 TOC (Intersection Observer 스크롤 추적)
-- [ ] OG 이미지 자동 생성 (next/og + satori)
-- [ ] 조회수 표시 (Vercel Analytics 또는 Upstash Redis)
-- [ ] 댓글 (giscus - GitHub Discussions 기반)
+- [x] 포스트 검색 (Fuse.js 클라이언트 검색)
+- [x] 포스트 TOC (Intersection Observer 스크롤 추적)
+- [x] OG 이미지 자동 생성 (next/og)
+- [x] 조회수 표시 (Upstash Redis + Vercel Analytics)
+- [x] 댓글 (giscus - GitHub Discussions 기반)
 
 ### 3차
 
