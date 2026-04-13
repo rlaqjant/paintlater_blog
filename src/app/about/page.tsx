@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "소개",
@@ -24,6 +26,37 @@ export default function AboutPage() {
           운영 환경에서 마주친 문제, 해결 과정, 그리고 그 과정에서 얻은 교훈을
           다룹니다.
         </p>
+
+        <a
+          href="https://paintlater.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="not-prose group my-10 flex flex-col items-center gap-5 rounded-2xl border border-border bg-muted/30 p-8 no-underline transition-all hover:-translate-y-0.5 hover:border-foreground/40 hover:bg-muted/50 hover:shadow-lg sm:flex-row sm:gap-8 sm:p-10"
+          aria-label="PaintLater 서비스 바로가기"
+        >
+          <div className="flex flex-1 items-center justify-center">
+            <Image
+              src="/images/paintlater-logo.png"
+              alt="PaintLater"
+              width={1229}
+              height={206}
+              priority
+              className="h-auto w-full max-w-[340px] dark:invert"
+            />
+          </div>
+          <div className="flex flex-col gap-1 text-center sm:text-left">
+            <div className="text-xs uppercase tracking-wider text-muted-foreground">
+              서비스 바로가기
+            </div>
+            <div className="flex items-center justify-center gap-2 text-base font-semibold text-foreground group-hover:underline sm:justify-start">
+              paintlater.org
+              <ExternalLink className="h-4 w-4" aria-hidden />
+            </div>
+            <div className="mt-1 text-sm text-muted-foreground">
+              미니어처·모형 작업 기록 관리 플랫폼
+            </div>
+          </div>
+        </a>
 
         <h2>PaintLater 서비스</h2>
         <p>
@@ -184,8 +217,9 @@ export default function AboutPage() {
             rel="noopener noreferrer"
           >
             paintlater.org
-          </a>{" "}
-          를 방문해주세요.
+          </a>
+          를 방문해주세요. 블로그 포스트에 대한 의견은 각 포스트 하단 댓글로
+          남겨주시면 됩니다.
         </p>
       </div>
     </div>
