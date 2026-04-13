@@ -38,7 +38,7 @@ export default function AboutPage() {
           href="https://paintlater.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="not-prose group my-10 flex flex-col items-center gap-6 rounded-2xl border border-border bg-muted/30 p-8 no-underline transition-all hover:-translate-y-0.5 hover:border-foreground/40 hover:bg-muted/50 hover:shadow-lg sm:flex-row sm:gap-8 sm:p-10"
+          className="not-prose group my-10 flex flex-col items-center justify-center gap-6 rounded-2xl border border-border bg-muted/30 p-8 no-underline transition-all hover:-translate-y-0.5 hover:border-foreground/40 hover:bg-muted/50 hover:shadow-lg sm:flex-row sm:gap-8 sm:p-10"
           aria-label="PaintLater 서비스 바로가기"
         >
           <Image
@@ -49,7 +49,7 @@ export default function AboutPage() {
             priority
             className="h-24 w-24 shrink-0 sm:h-28 sm:w-28 dark:invert"
           />
-          <div className="flex flex-1 flex-col items-center gap-2 sm:items-start">
+          <div className="flex flex-col items-center gap-2">
             <div
               className={`${bungee.className} text-4xl leading-none tracking-tight sm:text-5xl`}
               aria-label="PaintLater"
