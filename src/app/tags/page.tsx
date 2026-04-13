@@ -16,7 +16,7 @@ export default function TagsPage() {
   );
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-12">
+    <div className="mx-auto max-w-5xl px-6 py-12">
       <h1 className="text-3xl font-bold tracking-tight mb-8">태그</h1>
       {tags.length === 0 ? (
         <p className="text-muted-foreground">등록된 태그가 없습니다.</p>

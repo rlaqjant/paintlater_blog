@@ -33,7 +33,7 @@ export default async function SeriesPage({
   if (posts.length === 0) notFound();
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-12">
+    <div className="mx-auto max-w-5xl px-6 py-12">
       <h1 className="text-3xl font-bold tracking-tight mb-2">
         시리즈: {decoded}
       </h1>

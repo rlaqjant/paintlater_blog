@@ -59,7 +59,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <header className="border-b border-border">
-            <div className="mx-auto max-w-3xl px-6 py-4 flex items-center justify-between">
+            <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
               <Link href="/" className="font-semibold tracking-tight">
                 PaintLater Blog
               </Link>
@@ -89,7 +89,7 @@ export default function RootLayout({
           </header>
           <main className="flex-1">{children}</main>
           <footer className="border-t border-border">
-            <div className="mx-auto max-w-3xl px-6 py-6 text-sm text-muted-foreground">
+            <div className="mx-auto max-w-5xl px-6 py-6 text-sm text-muted-foreground">
               © {new Date().getFullYear()} PaintLater Blog
             </div>
           </footer>

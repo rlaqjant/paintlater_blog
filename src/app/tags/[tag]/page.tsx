@@ -31,7 +31,7 @@ export default async function TagPage({
   if (posts.length === 0) notFound();
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-12">
+    <div className="mx-auto max-w-5xl px-6 py-12">
       <h1 className="text-3xl font-bold tracking-tight mb-2">#{decoded}</h1>
       <p className="mb-8 text-sm text-muted-foreground">
         총 {posts.length}개의 포스트
