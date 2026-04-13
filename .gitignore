@@ -36,6 +36,7 @@ yarn-error.log*
 
 # claude code local state
 .claude/
+.omc/
 
 # vercel
 .vercel
@@ -43,3 +44,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
