@@ -52,6 +52,7 @@ docs/analysis/<YYYY-MM-DD>-<slug>.md
 
 **포스트 작성 시 준수 사항**
 
+- 포스트 본문의 **문체는 `docs/style/blog-tone-guide.md` 를 반드시 따른다**. 합쇼체 일관, 1인칭 `저 / 저희 서비스`, 이모지 금지, 번역투 금지, 마무리 섹션 제목은 `마치며` 로 고정 등. 발행 직전 해당 문서의 체크리스트를 수행한다.
 - 분석 문서에 기록된 **파일:라인 기준으로만** 코드 인용. 분석 문서에 없는 라인은 인용 금지.
 - 분석 문서의 "확인 필요 영역" 에 해당하는 내용은 포스트에 쓰지 않는다. 필요하면 다시 분석 단계로 돌아간다.
 - 포스트 작성 완료 후, 해당 분석 문서의 상단에 "→ `content/posts/<slug>.mdx` 에 반영됨" 링크를 추가한다.
@@ -62,9 +63,12 @@ docs/analysis/<YYYY-MM-DD>-<slug>.md
 - ❌ 에이전트 분석 결과를 그대로 포스트에 복사 (재작성 필수)
 - ❌ "대략 이럴 것이다" 식 추측 서술
 - ❌ 한 분석 문서에 여러 포스트 주제를 섞기
+- ❌ `docs/style/blog-tone-guide.md` 의 금지 목록(반말/해요체, 이모지, 과장 수사, 번역투 등) 위반
 
 ### 참고 문서
 
 - `docs/PROJECT_OUTLINE.md` — 전체 블로그 기획 / 로드맵
 - `docs/PROJECT_STRUCTURE.md` — PaintLater 저장소 전반 구조 맵 (시맨틱 지도)
 - `docs/analysis/` — 포스트별 정밀 분석 문서 (이 규칙으로 생성됨)
+- `docs/style/blog-tone-guide.md` — **블로그 기본 문체 가이드 (포스트 작성 시 필수 준수)**
+- `docs/style/ly-tone-study.md` — 위 가이드의 근거가 된 LY Corp 기술블로그 한국어 포스트 문체 분석

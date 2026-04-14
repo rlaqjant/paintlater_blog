@@ -8,7 +8,7 @@ seriesOrder: 1
 draft: false
 ---
 
-Spring Boot에서 `@RestController`를 붙이고 `@GetMapping`만 달아도 REST API는 동작합니다. 튜토리얼 한 편이면 CRUD가 돌아가고, Postman에서 200이 돌아오는 것을 확인하면 일이 끝난 것 같습니다.
+Spring Boot에서 `@RestController`를 붙이고 `@GetMapping`만 달아도 REST API는 동작합니다. 튜토리얼 한 편이면 CRUD가 돌아가고, Postman에서 200이 돌아오는 것을 확인하면 일이 끝난 것처럼 보입니다.
 
 그런데 API가 여러 도메인으로 커지고, 프론트와 모바일 앱이 동시에 붙기 시작하면 이야기가 달라집니다. 누군가는 URL에 `getUsers` 같은 동사를 박고, 누군가는 200에 `{ success: false }`를 담아 내려보냅니다. 에러 응답이 엔드포인트마다 모양이 다르고, 심한 경우 JPA 엔티티가 그대로 직렬화돼서 `Hibernate.BYTE[]_SENTINEL`이 클라이언트까지 튀어나가기도 합니다.
 
@@ -138,9 +138,9 @@ RFC 9110(HTTP Semantics, 2022)은 메서드를 두 축으로 분류합니다.
 
 | 메서드 | Safe | Idempotent |
 |---|---|---|
-| GET / HEAD / OPTIONS | ✓ | ✓ |
-| PUT / DELETE | ✗ | ✓ |
-| POST / PATCH | ✗ | ✗ |
+| GET / HEAD / OPTIONS | O | O |
+| PUT / DELETE | X | O |
+| POST / PATCH | X | X |
 
 이 표는 곧 **네트워크 오류가 났을 때 자동 재시도를 해도 되는가** 하는 문제로 이어집니다. POST/PATCH는 idempotent가 아니기 때문에, 타임아웃이 떴다고 무작정 재시도하면 똑같은 리소스를 두 번 만들거나 이상한 상태 전이가 생길 수 있습니다. Stripe가 [`Idempotency-Key` 헤더](https://stripe.com/docs/api/idempotent_requests)를 도입한 것이 이 문제를 풀기 위한 업계 표준 패턴입니다.
 
@@ -702,7 +702,7 @@ JPA 엔티티를 그대로 반환하면 Hibernate의 내부 구조가 API로 새
 
 `ErrorCode` enum의 `E2003`, `E4001` 같은 코드는 단순한 디버깅 힌트가 아닙니다. 프론트는 이 코드를 보고 "토큰 갱신을 시도할지, 로그아웃할지, 에러 토스트를 띄울지"를 결정하거든요. HTTP 상태 코드(`401`) 하나로는 부족한 구체성을 애플리케이션 에러 코드가 메꿔주는 셈입니다.
 
----
+## 마치며
 
 REST Level 3 HATEOAS 같은 형식 준수는 실무에서 거의 쓸 일이 없습니다. 다만 이 글에서 다룬 Level 2의 세 축(리소스 설계, 상태 코드, DTO 경계)은 프레임워크가 기본으로 제공하지 않는 영역이고, API 수가 10개에서 100개로 늘어날 때 가장 먼저 일관성이 흐트러지는 지점이기도 합니다.
 

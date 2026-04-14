@@ -37,6 +37,7 @@ yarn-error.log*
 # claude code local state
 .claude/
 .omc/
+.history/
 
 # vercel
 .vercel
